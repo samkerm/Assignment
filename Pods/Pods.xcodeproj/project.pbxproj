@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -50,7 +50,7 @@
 		2BF5AB76EC730FB965EF2889A540A0D3 /* GiphyCoreSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GiphyCoreSDK-dummy.m"; sourceTree = "<group>"; };
 		305DFAE2C33DDD9BC4B6B996A95B004E /* GPHPagination.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHPagination.swift; path = Source/GPHPagination.swift; sourceTree = "<group>"; };
 		313DA670A098A75441A958A8E26D8BE2 /* GPHMappable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHMappable.swift; path = Source/GPHMappable.swift; sourceTree = "<group>"; };
-		3D352853BE76BA373FA5F2533C0B672F /* GiphyCoreSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GiphyCoreSDK.framework; path = GiphyCoreSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D352853BE76BA373FA5F2533C0B672F /* GiphyCoreSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GiphyCoreSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C8C7407D30C75512ED4ACB9DD8715B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4616F153941CE80E311F06B302E21EC8 /* GPHMedia.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHMedia.swift; path = Source/GPHMedia.swift; sourceTree = "<group>"; };
 		4EC0029E0073834CA4A9EC98B6C1CCC2 /* GiphyCoreSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GiphyCoreSDK.xcconfig; sourceTree = "<group>"; };
@@ -62,17 +62,17 @@
 		83B0CFE6F47CDCD089C7CC612D971FDA /* Pods-FreshWorks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FreshWorks.debug.xcconfig"; sourceTree = "<group>"; };
 		85253E2A46026084606ACE3C949D38B5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89A6060733AB76D96AAADCC48DDF72D3 /* GPHUser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHUser.swift; path = Source/GPHUser.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		997E55BAB020ACC321F2D5F3D4E13880 /* Pods-FreshWorks.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FreshWorks.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		997E55BAB020ACC321F2D5F3D4E13880 /* Pods-FreshWorks.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FreshWorks.modulemap"; sourceTree = "<group>"; };
 		9A302E40D1FD222152DBF5DF3EF4F8FE /* GPHClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHClient.swift; path = Source/GPHClient.swift; sourceTree = "<group>"; };
 		9C2E890A881CCCB5C5084D14560843C2 /* GPHImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHImage.swift; path = Source/GPHImage.swift; sourceTree = "<group>"; };
 		B2A57BF8CB482E12B67682D32BDE4076 /* GiphyCoreSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GiphyCoreSDK-umbrella.h"; sourceTree = "<group>"; };
 		B7B01A4E1D980D7DF3E0809B45486146 /* GPHRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHRequest.swift; path = Source/GPHRequest.swift; sourceTree = "<group>"; };
-		BA48883F8DED2E07BA7AA53E9316A613 /* GiphyCoreSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GiphyCoreSDK.modulemap; sourceTree = "<group>"; };
+		BA48883F8DED2E07BA7AA53E9316A613 /* GiphyCoreSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = GiphyCoreSDK.modulemap; sourceTree = "<group>"; };
 		BC2CECA5768BCD55688A744BA4F9E84A /* GPHTermSuggestion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHTermSuggestion.swift; path = Source/GPHTermSuggestion.swift; sourceTree = "<group>"; };
 		BD9ECBD0B2274F88C17B32BABBF15255 /* GPHResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHResponse.swift; path = Source/GPHResponse.swift; sourceTree = "<group>"; };
 		BEAE3F221BED0EBB7AAC4B1BC89EDFCB /* Pods-FreshWorks-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FreshWorks-acknowledgements.plist"; sourceTree = "<group>"; };
-		BEE747070B2DAA41A7F9D4540CFA0992 /* Pods_FreshWorks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FreshWorks.framework; path = "Pods-FreshWorks.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEE747070B2DAA41A7F9D4540CFA0992 /* Pods_FreshWorks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreshWorks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8558C3C0F4B4879EF7DAD720FFFE136 /* GPHListMediaResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHListMediaResponse.swift; path = Source/GPHListMediaResponse.swift; sourceTree = "<group>"; };
 		D0C2AE4F48F459B75F427EB43DF3EE2B /* GPHTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHTypes.swift; path = Source/GPHTypes.swift; sourceTree = "<group>"; };
 		D93E0FB21BC9A9A93DB49AB68F517D3A /* Pods-FreshWorks-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FreshWorks-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -204,7 +204,6 @@
 				89A6060733AB76D96AAADCC48DDF72D3 /* GPHUser.swift */,
 				12017A6375811F5293049A83E0A1E609 /* Support Files */,
 			);
-			name = GiphyCoreSDK;
 			path = GiphyCoreSDK;
 			sourceTree = "<group>";
 		};
