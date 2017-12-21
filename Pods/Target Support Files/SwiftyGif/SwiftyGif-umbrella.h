@@ -10,8 +10,8 @@
 #endif
 #endif
 
-#import "UIScrollView+InfiniteScroll.h"
+#import "SwiftyGif.h"
 
-FOUNDATION_EXPORT double UIScrollView_InfiniteScrollVersionNumber;
-FOUNDATION_EXPORT const unsigned char UIScrollView_InfiniteScrollVersionString[];
+FOUNDATION_EXPORT double SwiftyGifVersionNumber;
+FOUNDATION_EXPORT const unsigned char SwiftyGifVersionString[];
 
