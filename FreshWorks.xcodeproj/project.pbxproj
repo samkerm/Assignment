@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		531763CD1FEB574500F5C15A /* FreshWorks iOS Giphy Sample App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FreshWorks iOS Giphy Sample App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		531763CD1FEB574500F5C15A /* FreshWorks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreshWorks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		531763D01FEB574500F5C15A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		531763D21FEB574500F5C15A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		531763D41FEB574500F5C15A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		531763CE1FEB574500F5C15A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				531763CD1FEB574500F5C15A /* FreshWorks iOS Giphy Sample App.app */,
+				531763CD1FEB574500F5C15A /* FreshWorks.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,9 +70,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		531763CC1FEB574500F5C15A /* FreshWorks iOS Giphy Sample App */ = {
+		531763CC1FEB574500F5C15A /* FreshWorks */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 531763E11FEB574500F5C15A /* Build configuration list for PBXNativeTarget "FreshWorks iOS Giphy Sample App" */;
+			buildConfigurationList = 531763E11FEB574500F5C15A /* Build configuration list for PBXNativeTarget "FreshWorks" */;
 			buildPhases = (
 				531763C91FEB574500F5C15A /* Sources */,
 				531763CA1FEB574500F5C15A /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = "FreshWorks iOS Giphy Sample App";
+			name = FreshWorks;
 			productName = "FreshWorks iOS Giphy Sample App";
-			productReference = 531763CD1FEB574500F5C15A /* FreshWorks iOS Giphy Sample App.app */;
+			productReference = 531763CD1FEB574500F5C15A /* FreshWorks.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -103,7 +103,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 531763C81FEB574500F5C15A /* Build configuration list for PBXProject "FreshWorks iOS Giphy Sample App" */;
+			buildConfigurationList = 531763C81FEB574500F5C15A /* Build configuration list for PBXProject "FreshWorks" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -116,7 +116,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				531763CC1FEB574500F5C15A /* FreshWorks iOS Giphy Sample App */,
+				531763CC1FEB574500F5C15A /* FreshWorks */,
 			);
 		};
 /* End PBXProject section */
@@ -307,7 +307,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		531763C81FEB574500F5C15A /* Build configuration list for PBXProject "FreshWorks iOS Giphy Sample App" */ = {
+		531763C81FEB574500F5C15A /* Build configuration list for PBXProject "FreshWorks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				531763DF1FEB574500F5C15A /* Debug */,
@@ -316,7 +316,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		531763E11FEB574500F5C15A /* Build configuration list for PBXNativeTarget "FreshWorks iOS Giphy Sample App" */ = {
+		531763E11FEB574500F5C15A /* Build configuration list for PBXNativeTarget "FreshWorks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				531763E21FEB574500F5C15A /* Debug */,
