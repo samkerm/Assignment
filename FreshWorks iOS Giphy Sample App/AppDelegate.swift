@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import GiphyCoreSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    public var client: GPHClient?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        client = GPHClient(apiKey: "LvCuUwT3vq20FL2xAcMr2MCru0ocsEwc")
         // Override point for customization after application launch.
         return true
     }

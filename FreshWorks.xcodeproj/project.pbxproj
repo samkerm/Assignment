@@ -13,9 +13,13 @@
 		531763D81FEB574500F5C15A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 531763D61FEB574500F5C15A /* Main.storyboard */; };
 		531763DA1FEB574500F5C15A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 531763D91FEB574500F5C15A /* Assets.xcassets */; };
 		531763DD1FEB574500F5C15A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 531763DB1FEB574500F5C15A /* LaunchScreen.storyboard */; };
+		531763E91FEB5C7C00F5C15A /* GiphySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531763E81FEB5C7C00F5C15A /* GiphySearch.swift */; };
+		531763EB1FEB604800F5C15A /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531763EA1FEB604800F5C15A /* SearchResults.swift */; };
+		F7C51356015F97FBD7E72C78 /* Pods_FreshWorks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BF31CA742F3A9ABB5C313F /* Pods_FreshWorks.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1EEE2A2B717649181142575C /* Pods-FreshWorks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreshWorks.release.xcconfig"; path = "Pods/Target Support Files/Pods-FreshWorks/Pods-FreshWorks.release.xcconfig"; sourceTree = "<group>"; };
 		531763CD1FEB574500F5C15A /* FreshWorks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreshWorks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		531763D01FEB574500F5C15A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		531763D21FEB574500F5C15A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +28,10 @@
 		531763D91FEB574500F5C15A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		531763DC1FEB574500F5C15A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		531763DE1FEB574500F5C15A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		531763E81FEB5C7C00F5C15A /* GiphySearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphySearch.swift; sourceTree = "<group>"; };
+		531763EA1FEB604800F5C15A /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
+		D2BA1F0DB1DC8642B3E1909F /* Pods-FreshWorks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreshWorks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FreshWorks/Pods-FreshWorks.debug.xcconfig"; sourceTree = "<group>"; };
+		F7BF31CA742F3A9ABB5C313F /* Pods_FreshWorks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreshWorks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7C51356015F97FBD7E72C78 /* Pods_FreshWorks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,8 @@
 			children = (
 				531763CF1FEB574500F5C15A /* FreshWorks iOS Giphy Sample App */,
 				531763CE1FEB574500F5C15A /* Products */,
+				8F15066933E1FC0B664AFD56 /* Pods */,
+				D10B10D3426ED3F60A6B8524 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,6 +68,8 @@
 			isa = PBXGroup;
 			children = (
 				531763D01FEB574500F5C15A /* AppDelegate.swift */,
+				531763E81FEB5C7C00F5C15A /* GiphySearch.swift */,
+				531763EA1FEB604800F5C15A /* SearchResults.swift */,
 				531763D21FEB574500F5C15A /* FirstViewController.swift */,
 				531763D41FEB574500F5C15A /* SecondViewController.swift */,
 				531763D61FEB574500F5C15A /* Main.storyboard */,
@@ -67,6 +80,23 @@
 			path = "FreshWorks iOS Giphy Sample App";
 			sourceTree = "<group>";
 		};
+		8F15066933E1FC0B664AFD56 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D2BA1F0DB1DC8642B3E1909F /* Pods-FreshWorks.debug.xcconfig */,
+				1EEE2A2B717649181142575C /* Pods-FreshWorks.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D10B10D3426ED3F60A6B8524 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7BF31CA742F3A9ABB5C313F /* Pods_FreshWorks.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 531763E11FEB574500F5C15A /* Build configuration list for PBXNativeTarget "FreshWorks" */;
 			buildPhases = (
+				2CA19641C259039CFC4232BF /* [CP] Check Pods Manifest.lock */,
 				531763C91FEB574500F5C15A /* Sources */,
 				531763CA1FEB574500F5C15A /* Frameworks */,
 				531763CB1FEB574500F5C15A /* Resources */,
+				FA67EA21A14B80062B14F0D4 /* [CP] Embed Pods Frameworks */,
+				4DD98C4F84FCE5EA69099A59 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,6 +167,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2CA19641C259039CFC4232BF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FreshWorks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DD98C4F84FCE5EA69099A59 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FreshWorks/Pods-FreshWorks-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA67EA21A14B80062B14F0D4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FreshWorks/Pods-FreshWorks-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GiphyCoreSDK/GiphyCoreSDK.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GiphyCoreSDK.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FreshWorks/Pods-FreshWorks-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		531763C91FEB574500F5C15A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -141,7 +228,9 @@
 			files = (
 				531763D51FEB574500F5C15A /* SecondViewController.swift in Sources */,
 				531763D11FEB574500F5C15A /* AppDelegate.swift in Sources */,
+				531763EB1FEB604800F5C15A /* SearchResults.swift in Sources */,
 				531763D31FEB574500F5C15A /* FirstViewController.swift in Sources */,
+				531763E91FEB5C7C00F5C15A /* GiphySearch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +365,7 @@
 		};
 		531763E21FEB574500F5C15A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2BA1F0DB1DC8642B3E1909F /* Pods-FreshWorks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,6 +381,7 @@
 		};
 		531763E31FEB574500F5C15A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EEE2A2B717649181142575C /* Pods-FreshWorks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
