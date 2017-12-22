@@ -29,12 +29,18 @@ open class Search {
     }
 
     func performSearch( // MediaType can be used as a segment control to switch between the types of content
-        for text: String, mediaType type: GPHMediaType = .gif, completion: @escaping (Bool) -> Void)
+        for text: String,
+        mediaType type: GPHMediaType = .gif,
+        offset by: Int = 0,
+        to eResults: [SearchResult] = [SearchResult](),
+        completion: @escaping (Bool) -> Void)
     {
-        state = .loading
+        if eResults.count == 0 {
+            state = .loading
+        }
         if let client = appDelegate?.client
         {
-            client.search(text, media: type )
+            client.search(text, media: type, offset: by)
             { (response, error) in
                 if let error = error as NSError? {
                     print(error)
@@ -43,7 +49,7 @@ open class Search {
                 
                 // Load the urls from API and once all data is received then fetch all data for each url.
                 // Better performance in presentation
-                if let response = response, let searchData = response.data, let pagination = response.pagination {
+                if let response = response, let searchData = response.data, let pagination = response.pagination, searchData.count != 0 {
                     print("Results found:", searchData.count)
                     print("Pagination:", pagination.count)
                     var results = [SearchResult]()
@@ -57,11 +63,13 @@ open class Search {
                     var fetchedDataCount = 0
                     for result in results {
                         self.fetchDataFrom(URL: result.gifUrl, completion: { (data, error) in
-                            if data != nil {
-                                result.gifData = data!
+                            if let d = data {
+                                result.gifData = d
                                 fetchedDataCount += 1
                             }
+                            print(fetchedDataCount)
                             if fetchedDataCount == searchData.count {
+                                results.insert(contentsOf: eResults, at: 0)
                                 self.state = .results(results)
                                 completion(true)
                             }
@@ -119,6 +127,8 @@ open class Search {
             }
         }
     }
+    
+
     
     fileprivate func parseResults(result: GPHMedia) -> SearchResult?
     {

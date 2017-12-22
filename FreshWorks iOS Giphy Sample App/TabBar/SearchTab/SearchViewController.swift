@@ -17,6 +17,7 @@ struct TableViewCellIdentifiers {
 class SearchViewController: UIViewController {
 
     let search = Search(state: .notSearchedYet)
+    var isFetchingNewResults = false
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -78,6 +79,29 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
                 let searchResult = list[indexPath.row]
                 cell.configure(with: searchResult)
                 return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        switch search.state {
+        case .results(let list):
+            if indexPath.row == list.count - 10, !isFetchingNewResults { //you might decide to load sooner than last item
+                print(indexPath.row, list.count - 10)
+                isFetchingNewResults = true
+                search.performSearch(for: searchBar.text!, offset: list.count,to: list,  completion: { (success) in
+                    if !success {
+                        self.showErrorMessage()
+                    }
+                    
+                    // UI changes always get triggered on main queue
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                    self.isFetchingNewResults =  false
+                })
+            }
+        default:
+            break
         }
     }
 }
