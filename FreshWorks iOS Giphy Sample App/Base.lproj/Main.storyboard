@@ -68,31 +68,47 @@
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="4Pn-JD-SaU" kind="relationship" relationship="viewControllers" id="Mbx-W5-BiA"/>
+                        <segue destination="PB9-DS-mqf" kind="relationship" relationship="viewControllers" id="htC-14-s2c"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Second View Controller-->
-        <scene sceneID="1Ol-og-Izh">
+        <!--Favourites View Controller-->
+        <scene sceneID="5uk-VN-bj6">
             <objects>
-                <tableViewController id="4Pn-JD-SaU" customClass="SecondViewController" customModule="FreshWorks" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="320" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rua-Yt-7sQ">
+                <viewController id="PB9-DS-mqf" customClass="FavouritesViewController" customModule="FreshWorks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ajg-v8-uU2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelectionDuringEditing="YES" rowHeight="320" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LyQ-E9-Pgj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="PB9-DS-mqf" id="Pm5-dG-QFY"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <connections>
-                            <outlet property="dataSource" destination="4Pn-JD-SaU" id="nxX-gV-Sam"/>
-                            <outlet property="delegate" destination="4Pn-JD-SaU" id="9uq-w1-hal"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="zY2-EP-jDz"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N7f-uC-eeF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="LyQ-E9-Pgj" firstAttribute="leading" secondItem="kgE-zN-GXr" secondAttribute="leading" id="02N-ep-V9B"/>
+                            <constraint firstItem="LyQ-E9-Pgj" firstAttribute="top" secondItem="ajg-v8-uU2" secondAttribute="top" id="FNb-Gx-k3R"/>
+                            <constraint firstItem="LyQ-E9-Pgj" firstAttribute="trailing" secondItem="kgE-zN-GXr" secondAttribute="trailing" id="pU6-g1-reJ"/>
+                            <constraint firstItem="LyQ-E9-Pgj" firstAttribute="bottom" secondItem="kgE-zN-GXr" secondAttribute="bottom" id="ueo-Lu-1Nh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kgE-zN-GXr"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="Tk4-pU-bJM"/>
+                    <connections>
+                        <outlet property="tableView" destination="LyQ-E9-Pgj" id="Tdb-gA-BwK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7bs-FL-MAR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="361"/>
+            <point key="canvasLocation" x="749.60000000000002" y="358.4707646176912"/>
         </scene>
     </scenes>
 </document>

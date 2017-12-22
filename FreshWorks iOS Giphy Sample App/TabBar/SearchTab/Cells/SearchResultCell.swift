@@ -25,7 +25,13 @@ class SearchResultCell: UITableViewCell {
             favouriteButton.isSelected = !favouriteButton.isSelected
             if (favouriteButton.isSelected)
             {
-                Database.saveEntities(entities: [gif])
+                let test = gif.gifData as NSData
+                if test.length < 15000000 {
+                    Database.saveEntities(entities: [gif])
+                } else {
+                    print("file too big to save")
+                    favouriteButton.isSelected = false
+                }
             }
             else
             {

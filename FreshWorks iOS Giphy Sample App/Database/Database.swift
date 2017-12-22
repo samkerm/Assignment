@@ -44,6 +44,20 @@ class Database
         }
     }
     
+    // Delete entity by id
+    class func delete(by id: String)
+    {
+        if let entity = realm.objects(GIF.self).filter("id == '\(id)'").first {
+            try! realm.safeWrite {
+                realm.delete(entity)
+            }
+        }
+        else
+        {
+            print("Could not delete entity with id \(id)")
+        }
+    }
+    
     // Get all GIFs
     class func getAllGIFs() -> [GIF] {
         return realm.objects(GIF.self).map{$0}

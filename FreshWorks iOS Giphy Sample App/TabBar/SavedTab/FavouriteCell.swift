@@ -11,10 +11,9 @@ import SwiftyGif
 
 class FavouriteCell: UITableViewCell {
 
-    @IBOutlet weak var gifTitle: UILabel!
-    @IBOutlet weak var gifView: UIImageView!
-
     var newGifView: UIImageView?
+    var gifTitle: UILabel?
+    var platformView: UIView?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,20 +25,32 @@ class FavouriteCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(with gif: GIF) {
-        gifTitle.text = gif.title
-        let gifManager = SwiftyGifManager(memoryLimit:20)
-        let image = UIImage(gifData: gif.gifData, levelOfIntegrity:0.1)
-        self.newGifView = UIImageView(gifImage: image, manager: gifManager)
-        self.newGifView?.startAnimatingGif()
-        self.newGifView?.frame = self.gifView.frame
-        self.contentView.addSubview(self.newGifView!)
+    func configure(with gif: GIF)
+    {
+        // Create subviews you
+        platformView = UIView(frame: CGRect(x: 0, y: 10 , width: bounds.width, height: bounds.height - 10))
+        platformView!.backgroundColor = .white
+        contentView.addSubview(platformView!)
         
+        let gifManager = SwiftyGifManager(memoryLimit:20)
+        let image = UIImage(gifData: gif.gifData)
+        newGifView = UIImageView(gifImage: image, manager: gifManager)
+        newGifView?.startAnimatingGif()
+        newGifView?.frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height - 60)
+        platformView!.addSubview(newGifView!)
+        
+        gifTitle = UILabel(frame: CGRect(x: 10, y: bounds.height - 60, width: bounds.width - 10, height: 60))
+        gifTitle!.text = gif.title
+        gifTitle!.textAlignment = .justified
+        platformView!.addSubview(gifTitle!)
+        
+        contentView.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
     }
     
     override func prepareForReuse() {
-        gifTitle.text = ""
-        self.newGifView?.removeFromSuperview()
+        gifTitle?.removeFromSuperview()
+        platformView?.removeFromSuperview()
+        newGifView?.removeFromSuperview()
     }
 
 }

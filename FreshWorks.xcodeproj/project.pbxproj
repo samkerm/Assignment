@@ -17,9 +17,7 @@
 		532908CA1FECDE7200F935C0 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532908C91FECDE7200F935C0 /* Database.swift */; };
 		532908CC1FECDF0A00F935C0 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532908CB1FECDF0A00F935C0 /* Realm.swift */; };
 		532908CE1FECDF4700F935C0 /* GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532908CD1FECDF4700F935C0 /* GIF.swift */; };
-		532908D11FECE22700F935C0 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532908D01FECE22700F935C0 /* SecondViewController.swift */; };
 		532908D71FECE60100F935C0 /* FavouriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532908D51FECE60100F935C0 /* FavouriteCell.swift */; };
-		532908D81FECE60100F935C0 /* FavouriteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 532908D61FECE60100F935C0 /* FavouriteCell.xib */; };
 		532908DA1FECED4C00F935C0 /* Mongo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532908D91FECED4C00F935C0 /* Mongo.swift */; };
 		532908DF1FECF46400F935C0 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 532908DD1FECF46400F935C0 /* NothingFoundCell.xib */; };
 		534E19BD1FEB725200D0CD08 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534E19BB1FEB725200D0CD08 /* SearchResultCell.swift */; };
@@ -27,6 +25,7 @@
 		534E19C51FEB780A00D0CD08 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 534E19C31FEB780A00D0CD08 /* LoadingCell.xib */; };
 		534E19CD1FEB9EDA00D0CD08 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534E19CC1FEB9EDA00D0CD08 /* UIImageView.swift */; };
 		534E19D01FEBA94500D0CD08 /* placeholder.gif in Resources */ = {isa = PBXBuildFile; fileRef = 534E19CF1FEBA94400D0CD08 /* placeholder.gif */; };
+		53CB284E1FECFF1200BBEC4C /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CB284D1FECFF1200BBEC4C /* FavouritesViewController.swift */; };
 		F7C51356015F97FBD7E72C78 /* Pods_FreshWorks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BF31CA742F3A9ABB5C313F /* Pods_FreshWorks.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,9 +43,7 @@
 		532908C91FECDE7200F935C0 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		532908CB1FECDF0A00F935C0 /* Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
 		532908CD1FECDF4700F935C0 /* GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIF.swift; sourceTree = "<group>"; };
-		532908D01FECE22700F935C0 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		532908D51FECE60100F935C0 /* FavouriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCell.swift; sourceTree = "<group>"; };
-		532908D61FECE60100F935C0 /* FavouriteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteCell.xib; sourceTree = "<group>"; };
 		532908D91FECED4C00F935C0 /* Mongo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mongo.swift; sourceTree = "<group>"; };
 		532908DD1FECF46400F935C0 /* NothingFoundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 		534E19BB1FEB725200D0CD08 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
@@ -54,6 +51,7 @@
 		534E19C31FEB780A00D0CD08 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		534E19CC1FEB9EDA00D0CD08 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		534E19CF1FEBA94400D0CD08 /* placeholder.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = placeholder.gif; sourceTree = SOURCE_ROOT; };
+		53CB284D1FECFF1200BBEC4C /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		D2BA1F0DB1DC8642B3E1909F /* Pods-FreshWorks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreshWorks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FreshWorks/Pods-FreshWorks.debug.xcconfig"; sourceTree = "<group>"; };
 		F7BF31CA742F3A9ABB5C313F /* Pods_FreshWorks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreshWorks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -173,9 +171,8 @@
 		534E19CE1FEB9FDE00D0CD08 /* SavedTab */ = {
 			isa = PBXGroup;
 			children = (
-				532908D01FECE22700F935C0 /* SecondViewController.swift */,
+				53CB284D1FECFF1200BBEC4C /* FavouritesViewController.swift */,
 				532908D51FECE60100F935C0 /* FavouriteCell.swift */,
-				532908D61FECE60100F935C0 /* FavouriteCell.xib */,
 			);
 			path = SavedTab;
 			sourceTree = "<group>";
@@ -266,7 +263,6 @@
 				534E19C51FEB780A00D0CD08 /* LoadingCell.xib in Resources */,
 				531763D81FEB574500F5C15A /* Main.storyboard in Resources */,
 				534E19D01FEBA94500D0CD08 /* placeholder.gif in Resources */,
-				532908D81FECE60100F935C0 /* FavouriteCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,13 +337,13 @@
 				531763D11FEB574500F5C15A /* AppDelegate.swift in Sources */,
 				534E19CD1FEB9EDA00D0CD08 /* UIImageView.swift in Sources */,
 				531763EB1FEB604800F5C15A /* SearchResults.swift in Sources */,
+				53CB284E1FECFF1200BBEC4C /* FavouritesViewController.swift in Sources */,
 				531763D31FEB574500F5C15A /* SearchViewController.swift in Sources */,
 				534E19BD1FEB725200D0CD08 /* SearchResultCell.swift in Sources */,
 				532908DA1FECED4C00F935C0 /* Mongo.swift in Sources */,
 				532908D71FECE60100F935C0 /* FavouriteCell.swift in Sources */,
 				532908CA1FECDE7200F935C0 /* Database.swift in Sources */,
 				531763E91FEB5C7C00F5C15A /* GiphySearch.swift in Sources */,
-				532908D11FECE22700F935C0 /* SecondViewController.swift in Sources */,
 				532908CC1FECDF0A00F935C0 /* Realm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
