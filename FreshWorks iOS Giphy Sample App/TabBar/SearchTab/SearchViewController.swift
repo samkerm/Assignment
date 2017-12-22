@@ -78,6 +78,8 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
                 let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.searchResultCell, for: indexPath) as! SearchResultCell
                 let searchResult = list[indexPath.row]
                 cell.configure(with: searchResult)
+                let spinner = cell.viewWithTag(100) as! UIActivityIndicatorView
+                spinner.stopAnimating()
                 return cell
         }
     }
@@ -85,7 +87,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         switch search.state {
         case .results(let list):
-            if indexPath.row == list.count - 10, !isFetchingNewResults { //you might decide to load sooner than last item
+            if indexPath.row == list.count - 10 && !isFetchingNewResults { //you might decide to load sooner than last item
                 print(indexPath.row, list.count - 10)
                 isFetchingNewResults = true
                 search.performSearch(for: searchBar.text!, offset: list.count,to: list,  completion: { (success) in
@@ -99,6 +101,12 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
                     }
                     self.isFetchingNewResults =  false
                 })
+            }
+            if indexPath.row == list.count - 1 && isFetchingNewResults {
+                if let cell = cell as? SearchResultCell {
+                    let spinner = cell.viewWithTag(100) as! UIActivityIndicatorView
+                    spinner.startAnimating()
+                }
             }
         default:
             break
