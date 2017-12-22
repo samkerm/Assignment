@@ -25,6 +25,7 @@ class SearchResultCell: UITableViewCell {
             favouriteButton.isSelected = !favouriteButton.isSelected
             if (favouriteButton.isSelected)
             {
+                // Due to Realm restrictions we need to check the file size for storage
                 let test = gif.gifData as NSData
                 if test.length < 15000000 {
                     Database.saveEntities(entities: [gif])
@@ -43,8 +44,6 @@ class SearchResultCell: UITableViewCell {
     override func awakeFromNib()
     {
         super.awakeFromNib()
-        let image = UIImage(named: "placeholder-img")
-        newGifView = UIImageView(image: image)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

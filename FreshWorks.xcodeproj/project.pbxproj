@@ -23,7 +23,6 @@
 		534E19BD1FEB725200D0CD08 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534E19BB1FEB725200D0CD08 /* SearchResultCell.swift */; };
 		534E19BE1FEB725200D0CD08 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 534E19BC1FEB725200D0CD08 /* SearchResultCell.xib */; };
 		534E19C51FEB780A00D0CD08 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 534E19C31FEB780A00D0CD08 /* LoadingCell.xib */; };
-		534E19CD1FEB9EDA00D0CD08 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534E19CC1FEB9EDA00D0CD08 /* UIImageView.swift */; };
 		534E19D01FEBA94500D0CD08 /* placeholder.gif in Resources */ = {isa = PBXBuildFile; fileRef = 534E19CF1FEBA94400D0CD08 /* placeholder.gif */; };
 		53CB284E1FECFF1200BBEC4C /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CB284D1FECFF1200BBEC4C /* FavouritesViewController.swift */; };
 		F7C51356015F97FBD7E72C78 /* Pods_FreshWorks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BF31CA742F3A9ABB5C313F /* Pods_FreshWorks.framework */; };
@@ -49,7 +48,6 @@
 		534E19BB1FEB725200D0CD08 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		534E19BC1FEB725200D0CD08 /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		534E19C31FEB780A00D0CD08 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
-		534E19CC1FEB9EDA00D0CD08 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		534E19CF1FEBA94400D0CD08 /* placeholder.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = placeholder.gif; sourceTree = SOURCE_ROOT; };
 		53CB284D1FECFF1200BBEC4C /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		D2BA1F0DB1DC8642B3E1909F /* Pods-FreshWorks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreshWorks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FreshWorks/Pods-FreshWorks.debug.xcconfig"; sourceTree = "<group>"; };
@@ -162,7 +160,6 @@
 		534E19CB1FEB9EBF00D0CD08 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
-				534E19CC1FEB9EDA00D0CD08 /* UIImageView.swift */,
 				532908CB1FECDF0A00F935C0 /* Realm.swift */,
 			);
 			path = Extentions;
@@ -335,7 +332,6 @@
 			files = (
 				532908CE1FECDF4700F935C0 /* GIF.swift in Sources */,
 				531763D11FEB574500F5C15A /* AppDelegate.swift in Sources */,
-				534E19CD1FEB9EDA00D0CD08 /* UIImageView.swift in Sources */,
 				531763EB1FEB604800F5C15A /* SearchResults.swift in Sources */,
 				53CB284E1FECFF1200BBEC4C /* FavouritesViewController.swift in Sources */,
 				531763D31FEB574500F5C15A /* SearchViewController.swift in Sources */,

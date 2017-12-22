@@ -99,10 +99,12 @@ extension SearchViewController: UISearchBarDelegate {
     }
     
     func performSearch() {
-        search.performSearch(for: searchBar.text!, mediaType: .gif) { (success) in
+        search.performSearch(for: searchBar.text!) { (success) in
             if !success {
                 self.showErrorMessage()
             }
+            
+            // UI changes always get triggered on main queue
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }

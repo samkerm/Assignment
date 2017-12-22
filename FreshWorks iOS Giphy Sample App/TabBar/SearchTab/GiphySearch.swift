@@ -28,7 +28,7 @@ open class Search {
         }
     }
 
-    func performSearch(
+    func performSearch( // MediaType can be used as a segment control to switch between the types of content
         for text: String, mediaType type: GPHMediaType = .gif, completion: @escaping (Bool) -> Void)
     {
         state = .loading
@@ -41,6 +41,8 @@ open class Search {
                     completion(false)
                 }
                 
+                // Load the urls from API and once all data is received then fetch all data for each url.
+                // Better performance in presentation
                 if let response = response, let searchData = response.data, let pagination = response.pagination {
                     print("Results found:", searchData.count)
                     print("Pagination:", pagination.count)
@@ -66,6 +68,7 @@ open class Search {
                         })
                     }
                 } else {
+                    // Dont give up and fetch for popular items
                     self.performTrendingSearch(mediaType: type, completion: { (success) in
                         completion(success)
                     })
