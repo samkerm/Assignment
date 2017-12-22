@@ -21,10 +21,10 @@
 		532908D71FECE60100F935C0 /* FavouriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532908D51FECE60100F935C0 /* FavouriteCell.swift */; };
 		532908D81FECE60100F935C0 /* FavouriteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 532908D61FECE60100F935C0 /* FavouriteCell.xib */; };
 		532908DA1FECED4C00F935C0 /* Mongo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532908D91FECED4C00F935C0 /* Mongo.swift */; };
+		532908DF1FECF46400F935C0 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 532908DD1FECF46400F935C0 /* NothingFoundCell.xib */; };
 		534E19BD1FEB725200D0CD08 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534E19BB1FEB725200D0CD08 /* SearchResultCell.swift */; };
 		534E19BE1FEB725200D0CD08 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 534E19BC1FEB725200D0CD08 /* SearchResultCell.xib */; };
 		534E19C51FEB780A00D0CD08 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 534E19C31FEB780A00D0CD08 /* LoadingCell.xib */; };
-		534E19C91FEB78C300D0CD08 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 534E19C71FEB78C300D0CD08 /* NothingFoundCell.xib */; };
 		534E19CD1FEB9EDA00D0CD08 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534E19CC1FEB9EDA00D0CD08 /* UIImageView.swift */; };
 		534E19D01FEBA94500D0CD08 /* placeholder.gif in Resources */ = {isa = PBXBuildFile; fileRef = 534E19CF1FEBA94400D0CD08 /* placeholder.gif */; };
 		F7C51356015F97FBD7E72C78 /* Pods_FreshWorks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BF31CA742F3A9ABB5C313F /* Pods_FreshWorks.framework */; };
@@ -48,10 +48,10 @@
 		532908D51FECE60100F935C0 /* FavouriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCell.swift; sourceTree = "<group>"; };
 		532908D61FECE60100F935C0 /* FavouriteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteCell.xib; sourceTree = "<group>"; };
 		532908D91FECED4C00F935C0 /* Mongo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mongo.swift; sourceTree = "<group>"; };
+		532908DD1FECF46400F935C0 /* NothingFoundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 		534E19BB1FEB725200D0CD08 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		534E19BC1FEB725200D0CD08 /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		534E19C31FEB780A00D0CD08 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
-		534E19C71FEB78C300D0CD08 /* NothingFoundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 		534E19CC1FEB9EDA00D0CD08 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		534E19CF1FEBA94400D0CD08 /* placeholder.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = placeholder.gif; sourceTree = SOURCE_ROOT; };
 		D2BA1F0DB1DC8642B3E1909F /* Pods-FreshWorks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreshWorks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FreshWorks/Pods-FreshWorks.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 		532908D41FECE5BD00F935C0 /* CommonCells */ = {
 			isa = PBXGroup;
 			children = (
-				534E19C71FEB78C300D0CD08 /* NothingFoundCell.xib */,
+				532908DD1FECF46400F935C0 /* NothingFoundCell.xib */,
 			);
 			path = CommonCells;
 			sourceTree = "<group>";
@@ -259,9 +259,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				532908DF1FECF46400F935C0 /* NothingFoundCell.xib in Resources */,
 				531763DD1FEB574500F5C15A /* LaunchScreen.storyboard in Resources */,
 				531763DA1FEB574500F5C15A /* Assets.xcassets in Resources */,
-				534E19C91FEB78C300D0CD08 /* NothingFoundCell.xib in Resources */,
 				534E19BE1FEB725200D0CD08 /* SearchResultCell.xib in Resources */,
 				534E19C51FEB780A00D0CD08 /* LoadingCell.xib in Resources */,
 				531763D81FEB574500F5C15A /* Main.storyboard in Resources */,

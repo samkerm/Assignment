@@ -17,17 +17,19 @@ class SecondViewController: UITableViewController {
         
         self.title = "Favourites"
         
-        var cellNib = UINib(nibName: TableViewCellIdentifiers.searchResultCell, bundle: nil)
-        tableView.register(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.searchResultCell)
-        cellNib = UINib(nibName: TableViewCellIdentifiers.nothingFoundCell, bundle: nil)
+        let cellNib = UINib(nibName: TableViewCellIdentifiers.nothingFoundCell, bundle: nil)
+        
         tableView.register(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.nothingFoundCell)
-        cellNib = UINib(nibName: TableViewCellIdentifiers.loadingCell, bundle: nil)
-        tableView.register(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.loadingCell)
+        tableView.register(FavouriteCell.self, forCellReuseIdentifier: String(describing: FavouriteCell.self))
         
         tableView.rowHeight = 320
         self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         favourites = Database.getAllGIFs()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+//        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,15 +45,26 @@ class SecondViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return favourites.count
+        switch favourites.count {
+        case 0:
+            return 1
+        default:
+            return favourites.count
+        }
     }
 
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: FavouriteCell.self), for: indexPath) as! FavouriteCell
-        cell.configure(with: favourites[indexPath.row])
-        return cell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        switch favourites.count {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.nothingFoundCell, for: indexPath)
+            return cell
+        default:
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: FavouriteCell.self), for: indexPath) as! FavouriteCell
+            cell.configure(with: favourites[indexPath.row])
+            return cell
+        }
     }
 
     /*
