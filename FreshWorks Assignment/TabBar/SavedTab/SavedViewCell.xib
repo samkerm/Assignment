@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SavedViewCell" id="gTV-IL-0wX" customClass="SavedViewCell" customModule="FreshWorks" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="320"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="320"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D53-N5-XhL">
+                        <rect key="frame" x="0.0" y="10" width="414" height="310"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0jP-4H-FWz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="273.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LX5-Zb-jIq">
+                                <rect key="frame" x="10" y="281.5" width="394" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfQ-jn-p6U">
+                                <rect key="frame" x="370" y="20" width="24" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="MPW-sh-gNC"/>
+                                    <constraint firstAttribute="height" constant="22" id="o6M-F4-iAS"/>
+                                </constraints>
+                                <state key="normal" image="delete"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LX5-Zb-jIq" firstAttribute="leading" secondItem="D53-N5-XhL" secondAttribute="leading" constant="10" id="5lf-nN-Jre"/>
+                            <constraint firstItem="LX5-Zb-jIq" firstAttribute="top" secondItem="0jP-4H-FWz" secondAttribute="bottom" constant="8" id="Hus-XV-sDu"/>
+                            <constraint firstAttribute="trailing" secondItem="0jP-4H-FWz" secondAttribute="trailing" id="Y7Y-1i-Yb0"/>
+                            <constraint firstAttribute="trailing" secondItem="LX5-Zb-jIq" secondAttribute="trailing" constant="10" id="fCj-i2-afx"/>
+                            <constraint firstAttribute="trailing" secondItem="mfQ-jn-p6U" secondAttribute="trailing" constant="20" id="j8F-kP-AlC"/>
+                            <constraint firstItem="mfQ-jn-p6U" firstAttribute="top" secondItem="D53-N5-XhL" secondAttribute="top" constant="20" id="jkb-GB-OnD"/>
+                            <constraint firstAttribute="bottom" secondItem="LX5-Zb-jIq" secondAttribute="bottom" constant="8" id="m3V-gN-ihj"/>
+                            <constraint firstItem="0jP-4H-FWz" firstAttribute="top" secondItem="D53-N5-XhL" secondAttribute="top" id="mBx-RD-M13"/>
+                            <constraint firstItem="0jP-4H-FWz" firstAttribute="leading" secondItem="D53-N5-XhL" secondAttribute="leading" id="sB9-Uj-LJw"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="D53-N5-XhL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="42u-dp-wPa"/>
+                <constraint firstItem="D53-N5-XhL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="9e9-PH-TwH"/>
+                <constraint firstAttribute="bottom" secondItem="D53-N5-XhL" secondAttribute="bottom" id="Sc6-wg-KuW"/>
+                <constraint firstAttribute="trailing" secondItem="D53-N5-XhL" secondAttribute="trailing" id="nqW-OB-MZR"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="deleteButton" destination="mfQ-jn-p6U" id="hGj-F8-6tr"/>
+                <outlet property="gifTitle" destination="LX5-Zb-jIq" id="JwK-j5-zwu"/>
+                <outlet property="gifView" destination="0jP-4H-FWz" id="npk-Y0-v9k"/>
+                <outlet property="viewPlatform" destination="D53-N5-XhL" id="gtF-7F-bqb"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="delete" width="50" height="50"/>
+    </resources>
+</document>
