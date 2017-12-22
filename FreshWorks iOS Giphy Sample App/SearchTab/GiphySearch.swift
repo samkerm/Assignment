@@ -31,6 +31,7 @@ open class Search {
     func performSearch(
         for text: String, mediaType type: GPHMediaType = .gif, completion: @escaping (Bool) -> Void)
     {
+        state = .loading
         if let client = appDelegate?.client
         {
             client.search(text, media: type )
@@ -40,18 +41,30 @@ open class Search {
                     completion(false)
                 }
                 
-                if let response = response, let data = response.data, let pagination = response.pagination {
-                    print("Results found:", data.count)
+                if let response = response, let searchData = response.data, let pagination = response.pagination {
+                    print("Results found:", searchData.count)
                     print("Pagination:", pagination.count)
                     var results = [SearchResult]()
-                    for result in data {
+                    for result in searchData
+                    {
                         if let result = self.parseResults(result: result)
                         {
                             results.append(result)
                         }
                     }
-                    self.state = .results(results)
-                    completion(true)
+                    var fetchedDataCount = 0
+                    for result in results {
+                        self.fetchDataFrom(URL: result.gifUrl, completion: { (data, error) in
+                            if data != nil {
+                                result.gifData = data!
+                                fetchedDataCount += 1
+                            }
+                            if fetchedDataCount == searchData.count {
+                                self.state = .results(results)
+                                completion(true)
+                            }
+                        })
+                    }
                 } else {
                     self.performTrendingSearch(mediaType: type, completion: { (success) in
                         completion(success)
@@ -73,19 +86,30 @@ open class Search {
                     completion(false)
                 }
                 
-                if let response = response, let data = response.data, let pagination = response.pagination {
-                    print("Results found:", data.count)
+                if let response = response, let searchData = response.data, let pagination = response.pagination {
+                    print("Results found:", searchData.count)
                     print("Pagination:", pagination.count)
                     var results = [SearchResult]()
-                    for result in data
+                    for result in searchData
                     {
                         if let result = self.parseResults(result: result)
                         {
                             results.append(result)
                         }
                     }
-                    self.state = .results(results)
-                    completion(true)
+                    var fetchedDataCount = 0
+                    for result in results {
+                        self.fetchDataFrom(URL: result.gifUrl, completion: { (data, error) in
+                            if data != nil {
+                                result.gifData = data!
+                                fetchedDataCount += 1
+                            }
+                            if fetchedDataCount == searchData.count {
+                                self.state = .results(results)
+                                completion(true)
+                            }
+                        })
+                    }
                 } else {
                     completion(false)
                 }
@@ -97,13 +121,37 @@ open class Search {
     {
         var searchResult: SearchResult?
         if let description = result.title,
-            let image = result.images?.original
+            let imageURL = result.images?.original?.gifUrl
         {
             searchResult = SearchResult()
             searchResult?.description   = description
-            searchResult?.gifUrl        = image.gifUrl ?? ""
-            searchResult?.mp4Url        = image.mp4Url ?? ""
+            searchResult?.gifUrl        = imageURL
         }
         return searchResult
+    }
+    
+    fileprivate func fetchDataFrom(URL url: String, completion: @escaping (Data?, Error?) -> Void)
+    {
+        var downloadTask: URLSessionDownloadTask?
+        let session = URLSession.shared
+
+        if let url = URL(string: url)
+        {
+            downloadTask = session.downloadTask(with: url, completionHandler: { url, response, error in
+                if error == nil, let url = url, let data = try? Data(contentsOf: url)
+                {
+                    completion(data, nil)
+                }
+                else if error != nil
+                {
+                    completion(nil, error)
+                }
+                else
+                {
+                    completion(nil, nil)
+                }
+            })
+            downloadTask?.resume()
+        }
     }
 }

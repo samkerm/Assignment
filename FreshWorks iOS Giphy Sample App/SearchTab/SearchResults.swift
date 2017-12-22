@@ -9,10 +9,10 @@
 import Foundation
 
 class SearchResult {
-    //    ------------------Variables from searching a title---------------
+
     var description = ""
-    var gifUrl = ""
-    var mp4Url = ""
+    var gifUrl      = ""
+    var gifData     = Data()
 }
 
 func < (lhs: SearchResult, rhs: SearchResult) -> Bool {

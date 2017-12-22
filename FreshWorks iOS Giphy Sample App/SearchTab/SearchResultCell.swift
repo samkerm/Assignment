@@ -24,6 +24,8 @@ class SearchResultCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        let image = UIImage(named: "placeholder-img")
+        newGifView = UIImageView(image: image)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,25 +37,12 @@ class SearchResultCell: UITableViewCell {
     func configure(with searchResult: SearchResult) {
         gifTitle.text = searchResult.description
         let gifManager = SwiftyGifManager(memoryLimit:20)
-        let image = UIImage(named: "placeholder-img")
-        newGifView = UIImageView(image: image)
-        let session = URLSession.shared
-        if let url = URL(string: searchResult.gifUrl)
-        {
-            downloadTask = session.downloadTask(with: url, completionHandler: { url, response, error in
-                if error == nil, let url = url, let data = try? Data(contentsOf: url)
-                {
-                    DispatchQueue.main.async {
-                        let image = UIImage(gifData: data, levelOfIntegrity:0.1)
-                        self.newGifView = UIImageView(gifImage: image, manager: gifManager)
-                        self.newGifView?.startAnimatingGif()
-                        self.newGifView?.frame = self.gifView.frame
-                        self.contentView.addSubview(self.newGifView!)
-                    }
-                }
-            })
-            downloadTask?.resume()
-        }
+        let image = UIImage(gifData: searchResult.gifData, levelOfIntegrity:0.1)
+        self.newGifView = UIImageView(gifImage: image, manager: gifManager)
+        self.newGifView?.startAnimatingGif()
+        self.newGifView?.frame = self.gifView.frame
+        self.contentView.addSubview(self.newGifView!)
+        
     }
     
     override func prepareForReuse() {
