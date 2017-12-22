@@ -16,7 +16,8 @@ class SearchResultCell: UITableViewCell {
     @IBOutlet weak var favouriteButton: UIButton!
     
     var downloadTask: URLSessionDownloadTask?
-    
+    var newGifView: UIImageView?
+
     @IBAction func addToFavourites(_ sender: Any) {
         favouriteButton.isSelected = !favouriteButton.isSelected
     }
@@ -33,31 +34,26 @@ class SearchResultCell: UITableViewCell {
     
     func configure(with searchResult: SearchResult) {
         gifTitle.text = searchResult.description
-        var newGifView = UIImageView()
+        let gifManager = SwiftyGifManager(memoryLimit:20)
+        let image = UIImage(named: "placeholder-img")
+        newGifView = UIImageView(image: image)
         let session = URLSession.shared
-        if let url = URL(string: searchResult.gifUrl) {
+        if let url = URL(string: searchResult.gifUrl)
+        {
             downloadTask = session.downloadTask(with: url, completionHandler: { url, response, error in
                 if error == nil, let url = url, let data = try? Data(contentsOf: url)
                 {
                     DispatchQueue.main.async {
-                        let gifManager = SwiftyGifManager(memoryLimit:20)
-                        let image = UIImage(gifData: data)
-                        newGifView = UIImageView(gifImage: image, manager: gifManager)
-                    }
-                } else {
-                    DispatchQueue.main.async {
-                        let image = UIImage(named: "placeholder-img")
-                        newGifView = UIImageView(image: image)
+                        let image = UIImage(gifData: data, levelOfIntegrity:0.1)
+                        self.newGifView = UIImageView(gifImage: image, manager: gifManager)
+                        self.newGifView?.startAnimatingGif()
+                        self.newGifView?.frame = self.gifView.frame
+                        self.contentView.addSubview(self.newGifView!)
                     }
                 }
-                
             })
             downloadTask?.resume()
         }
-        newGifView.startAnimatingGif()
-        newGifView.frame = gifView.frame
-        
-        self.contentView.addSubview(newGifView)
     }
     
     override func prepareForReuse() {
@@ -65,7 +61,7 @@ class SearchResultCell: UITableViewCell {
         downloadTask = nil
         favouriteButton.isSelected = false
         gifTitle.text = nil
-        gifView.image = nil
+        self.newGifView?.removeFromSuperview()
     }
 
 }
