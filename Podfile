@@ -8,6 +8,7 @@ target 'FreshWorks' do
   # Pods for FreshWorks
   pod 'GiphyCoreSDK'
   pod 'SwiftyGif'
+  pod 'RealmSwift'
 
   post_install do |installer|
     installer.pods_project.targets.each do |target|

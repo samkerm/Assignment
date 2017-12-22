@@ -8,6 +8,7 @@
 
 import UIKit
 import GiphyCoreSDK
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         client = GPHClient(apiKey: "LvCuUwT3vq20FL2xAcMr2MCru0ocsEwc")
         // Override point for customization after application launch.
         return true
+    }
+    
+    /// Setup migration for schemas
+    func setupDatabase()
+    {
+        let config = Realm.Configuration(
+            // Set the new schema version. This must be greater than the previously used
+            // version (if you've never set a schema version before, the version is 0).
+            schemaVersion: 0
+            
+            // Set the block which will be called automatically when opening a Realm with
+            // a schema version lower than the one set above
+            
+            /*
+            migrationBlock:
+            {
+                migration, oldSchemaVersion in
+                // We haven’t migrated anything yet, so oldSchemaVersion == 0
+                switch oldSchemaVersion
+                {
+                //case 1: break
+                case 1:
+                    //
+                    
+                default: break
+                }
+        }*/
+        )
+        
+        // Tell Realm to use this new configuration object for the default Realm
+        Realm.Configuration.defaultConfiguration = config
+        
+        // create default realm reference
+        Database.realm = try! Realm(configuration: config)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
