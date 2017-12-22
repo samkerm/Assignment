@@ -38,7 +38,7 @@ class FavouriteCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
-        gifTitle.text = nil
+        gifTitle.text = ""
         self.newGifView?.removeFromSuperview()
     }
 

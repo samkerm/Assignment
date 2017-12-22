@@ -41,8 +41,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="gifTitle" destination="jOl-zi-KqF" id="R5F-0A-jfd"/>
-                <outlet property="gifView" destination="ben-TV-arw" id="ian-1N-4uh"/>
+                <outlet property="gifTitle" destination="jOl-zi-KqF" id="Khl-em-obH"/>
+                <outlet property="gifView" destination="ben-TV-arw" id="eCY-Kh-D2F"/>
             </connections>
         </tableViewCell>
     </objects>
