@@ -40,6 +40,7 @@ open class Search {
         }
         if let client = appDelegate?.client
         {
+            var results = [SearchResult]()
             client.search(text, media: type, offset: by)
             { (response, error) in
                 if let error = error as NSError? {
@@ -52,7 +53,6 @@ open class Search {
                 if let response = response, let searchData = response.data, let pagination = response.pagination, searchData.count != 0 {
                     print("Results found:", searchData.count)
                     print("Pagination:", pagination.count)
-                    var results = [SearchResult]()
                     for result in searchData
                     {
                         if let result = self.parseResults(result: result)
@@ -77,8 +77,11 @@ open class Search {
                     }
                 } else {
                     // Dont give up and fetch for popular items
-                    self.performTrendingSearch(mediaType: type, completion: { (success) in
-                        completion(success)
+                    self.performTrendingSearch(mediaType: type, offset: by, completion: { (res) in
+                        results.insert(contentsOf: eResults, at: 0)
+                        results.append(contentsOf: res)
+                        self.state = .results(results)
+                        completion(true)
                     })
                 }
             }
@@ -86,21 +89,23 @@ open class Search {
     }
     
     private func performTrendingSearch(
-        mediaType type: GPHMediaType = .gif, completion: @escaping (Bool) -> Void)
+        mediaType type: GPHMediaType = .gif,
+        offset by: Int = 0,
+        completion: @escaping ([SearchResult]) -> Void)
     {
         if let client = appDelegate?.client
         {
-            client.trending(type )
+            var results = [SearchResult]()
+            client.trending(type, offset: by )
             { (response, error) in
                 if let error = error as NSError? {
                     print(error)
-                    completion(false)
+                    completion(results)
                 }
-                
                 if let response = response, let searchData = response.data, let pagination = response.pagination {
                     print("Results found:", searchData.count)
                     print("Pagination:", pagination.count)
-                    var results = [SearchResult]()
+                    
                     for result in searchData
                     {
                         if let result = self.parseResults(result: result)
@@ -115,14 +120,14 @@ open class Search {
                                 result.gifData = data!
                                 fetchedDataCount += 1
                             }
+                            print(fetchedDataCount)
                             if fetchedDataCount == searchData.count {
-                                self.state = .results(results)
-                                completion(true)
+                                completion(results)
                             }
                         })
                     }
                 } else {
-                    completion(false)
+                    completion(results)
                 }
             }
         }

@@ -22,11 +22,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FreshWorks iOS Giphy Sample App/TabBar/SearchTab/GiphySearch.swift"
-            timestampString = "535661863.353513"
+            timestampString = "535662772.262969"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "72"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FreshWorks iOS Giphy Sample App/TabBar/SearchTab/GiphySearch.swift"
-            timestampString = "535661863.353827"
+            timestampString = "535662772.263321"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FreshWorks iOS Giphy Sample App/TabBar/SearchTab/GiphySearch.swift"
-            timestampString = "535661863.354035"
+            timestampString = "535662772.263554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "performSearch(for:mediaType:offset:to:completion:)"
             landmarkType = "7">
          </BreakpointContent>
