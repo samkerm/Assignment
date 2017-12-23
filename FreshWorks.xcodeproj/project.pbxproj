@@ -30,7 +30,7 @@
 
 /* Begin PBXFileReference section */
 		1EEE2A2B717649181142575C /* Pods-FreshWorks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreshWorks.release.xcconfig"; path = "Pods/Target Support Files/Pods-FreshWorks/Pods-FreshWorks.release.xcconfig"; sourceTree = "<group>"; };
-		531763CD1FEB574500F5C15A /* FreshWorks Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FreshWorks Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		531763CD1FEB574500F5C15A /* FreshWorks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreshWorks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		531763D01FEB574500F5C15A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		531763D21FEB574500F5C15A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		531763D71FEB574500F5C15A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 		531763CE1FEB574500F5C15A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				531763CD1FEB574500F5C15A /* FreshWorks Assignment.app */,
+				531763CD1FEB574500F5C15A /* FreshWorks.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -186,9 +186,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		531763CC1FEB574500F5C15A /* FreshWorks Assignment */ = {
+		531763CC1FEB574500F5C15A /* FreshWorks */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 531763E11FEB574500F5C15A /* Build configuration list for PBXNativeTarget "FreshWorks Assignment" */;
+			buildConfigurationList = 531763E11FEB574500F5C15A /* Build configuration list for PBXNativeTarget "FreshWorks" */;
 			buildPhases = (
 				2CA19641C259039CFC4232BF /* [CP] Check Pods Manifest.lock */,
 				531763C91FEB574500F5C15A /* Sources */,
@@ -201,9 +201,9 @@
 			);
 			dependencies = (
 			);
-			name = "FreshWorks Assignment";
+			name = FreshWorks;
 			productName = "FreshWorks iOS Giphy Sample App";
-			productReference = 531763CD1FEB574500F5C15A /* FreshWorks Assignment.app */;
+			productReference = 531763CD1FEB574500F5C15A /* FreshWorks.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -222,7 +222,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 531763C81FEB574500F5C15A /* Build configuration list for PBXProject "FreshWorks Assignment" */;
+			buildConfigurationList = 531763C81FEB574500F5C15A /* Build configuration list for PBXProject "FreshWorks" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -235,7 +235,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				531763CC1FEB574500F5C15A /* FreshWorks Assignment */,
+				531763CC1FEB574500F5C15A /* FreshWorks */,
 			);
 		};
 /* End PBXProject section */
@@ -500,7 +500,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		531763C81FEB574500F5C15A /* Build configuration list for PBXProject "FreshWorks Assignment" */ = {
+		531763C81FEB574500F5C15A /* Build configuration list for PBXProject "FreshWorks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				531763DF1FEB574500F5C15A /* Debug */,
@@ -509,7 +509,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		531763E11FEB574500F5C15A /* Build configuration list for PBXNativeTarget "FreshWorks Assignment" */ = {
+		531763E11FEB574500F5C15A /* Build configuration list for PBXNativeTarget "FreshWorks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				531763E21FEB574500F5C15A /* Debug */,
