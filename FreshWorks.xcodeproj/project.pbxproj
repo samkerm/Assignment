@@ -25,6 +25,7 @@
 		53CB28561FED96C800BBEC4C /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CB28551FED96C800BBEC4C /* SavedViewController.swift */; };
 		53CB28591FED97B500BBEC4C /* SavedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CB28571FED97B500BBEC4C /* SavedViewCell.swift */; };
 		53CB285A1FED97B500BBEC4C /* SavedViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53CB28581FED97B500BBEC4C /* SavedViewCell.xib */; };
+		53FF51051FEF13B3006A221C /* NothingSavedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53FF51031FEF13B3006A221C /* NothingSavedCell.xib */; };
 		F7C51356015F97FBD7E72C78 /* Pods_FreshWorks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BF31CA742F3A9ABB5C313F /* Pods_FreshWorks.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		53CB28551FED96C800BBEC4C /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
 		53CB28571FED97B500BBEC4C /* SavedViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewCell.swift; sourceTree = "<group>"; };
 		53CB28581FED97B500BBEC4C /* SavedViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavedViewCell.xib; sourceTree = "<group>"; };
+		53FF51031FEF13B3006A221C /* NothingSavedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingSavedCell.xib; sourceTree = "<group>"; };
 		D2BA1F0DB1DC8642B3E1909F /* Pods-FreshWorks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreshWorks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FreshWorks/Pods-FreshWorks.debug.xcconfig"; sourceTree = "<group>"; };
 		F7BF31CA742F3A9ABB5C313F /* Pods_FreshWorks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreshWorks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -160,10 +162,19 @@
 			isa = PBXGroup;
 			children = (
 				53CB28551FED96C800BBEC4C /* SavedViewController.swift */,
-				53CB28571FED97B500BBEC4C /* SavedViewCell.swift */,
-				53CB28581FED97B500BBEC4C /* SavedViewCell.xib */,
+				53FF51061FEF13FC006A221C /* Cells */,
 			);
 			path = SavedTab;
+			sourceTree = "<group>";
+		};
+		53FF51061FEF13FC006A221C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				53CB28571FED97B500BBEC4C /* SavedViewCell.swift */,
+				53FF51031FEF13B3006A221C /* NothingSavedCell.xib */,
+				53CB28581FED97B500BBEC4C /* SavedViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		8F15066933E1FC0B664AFD56 /* Pods */ = {
@@ -252,6 +263,7 @@
 				534E19BE1FEB725200D0CD08 /* SearchResultCell.xib in Resources */,
 				534E19C51FEB780A00D0CD08 /* LoadingCell.xib in Resources */,
 				531763D81FEB574500F5C15A /* Main.storyboard in Resources */,
+				53FF51051FEF13B3006A221C /* NothingSavedCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,9 +21,10 @@ class SavedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let cellNib = UINib(nibName: String(describing: SavedViewCell.self), bundle: Bundle.main)
+        var cellNib = UINib(nibName: String(describing: SavedViewCell.self), bundle: Bundle.main)
         collectionView.register(cellNib, forCellWithReuseIdentifier: String(describing: SavedViewCell.self))
-        
+        cellNib = UINib(nibName: "NothingSavedCell", bundle: Bundle.main)
+        collectionView.register(cellNib, forCellWithReuseIdentifier: "NothingSavedCell")
         favourites = Database.getAllGIFs()
     }
     
@@ -45,19 +46,29 @@ extension SavedViewController: UICollectionViewDelegate, UICollectionViewDataSou
     //MARK CollectionViewDataSource Mathods
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return favourites.count
+        switch favourites.count {
+        case 0:
+            return 1
+        default:
+            return favourites.count
+        }
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: SavedViewCell.self), for: indexPath) as? SavedViewCell {
-            let gif = favourites[indexPath.row]
-            cell.deleteButton.addTarget(self, action: #selector(deleteImage(_:)), for: .touchUpInside)
-            cell.deleteButton.tag = indexPath.item
-            cell.configure(with: gif)
-            return cell
+        switch favourites.count {
+        case 0:
+            return collectionView.dequeueReusableCell(withReuseIdentifier: "NothingSavedCell", for: indexPath)
+        default:
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: SavedViewCell.self), for: indexPath) as? SavedViewCell {
+                let gif = favourites[indexPath.row]
+                cell.deleteButton.addTarget(self, action: #selector(deleteImage(_:)), for: .touchUpInside)
+                cell.deleteButton.tag = indexPath.item
+                cell.configure(with: gif)
+                return cell
+            }
+            return SavedViewCell()
         }
-        return SavedViewCell()
     }
     
 
